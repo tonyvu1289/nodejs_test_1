@@ -4,7 +4,6 @@ function route(app){
      
     app.use('/news',newsRouter);
     app.use('/',siteRouter)
-
     // app.get('/', (req, res) => {
     //     res.render('home');
     // })

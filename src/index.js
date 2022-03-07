@@ -4,6 +4,11 @@ const morgan = require('morgan');
 const {engine} = require('express-handlebars');
 const exp = require('constants');
 const route = require('./routes')
+
+//Connect to db
+const db = require('./config/db/index')
+db.connect()
+//Khởi tạo đối tượng server (bằng thư viện express)
 const app = express()
 const port = 3000
 // thư mục dữ liệu puplic lên
@@ -14,7 +19,7 @@ app.use(express.urlencoded({
 }))
 app.use(express.json())
 //HTTP logger
-//app.use(morgan('combined'))
+app.use(morgan('combined'))
 
 //Template engine
 app.engine('hbs',engine({
@@ -23,11 +28,11 @@ app.engine('hbs',engine({
 app.set('view engine','hbs')
 
 //Set views path 
-app.set('views',path.join(__dirname,'resources/views'))
+app.set('views',path.join(__dirname,'resources','views'))
 
 // Init route
 route(app)
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`App listening on port ${port}`)
 })
