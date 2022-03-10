@@ -4,6 +4,9 @@ const morgan = require('morgan');
 const {engine} = require('express-handlebars');
 const exp = require('constants');
 const route = require('./routes')
+
+const db = require(path.join(__dirname,'database'));
+
 const app = express()
 const port = 3000
 // thư mục dữ liệu puplic lên
