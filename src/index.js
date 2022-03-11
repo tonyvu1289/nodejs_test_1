@@ -5,6 +5,8 @@ const {engine} = require('express-handlebars');
 const exp = require('constants');
 const route = require('./routes')
 const app = express()
+const connectDB = require('./db')
+connectDB()
 const port = 3000
 // thư mục dữ liệu puplic lên
 app.use(express.static(path.join(__dirname,'public')))

@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "duy",
+    "password": "12345678",
+    "database": "QLKhachSan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "duy",
+    "password": "12345678",
+    "database": "QLKhachSan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "duy",
+    "password": "12345678",
+    "database": "QLKhachSan",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
